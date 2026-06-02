@@ -421,7 +421,7 @@ function ClientsTab({ clients, setClients, adStats }: ClientsTabProps) {
           { label: 'Завершено', value: stats.completed, icon: CheckCircle, gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)' },
           { label: 'Просрочено', value: stats.overdue, icon: AlertCircle, gradient: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)' }
         ].map((stat, idx) => (
-          <Grid item xs={12} sm={6} md={2} key={stat.label}>
+          <Grid size={{ xs: 12, sm: 6, md: 2 }} key={stat.label}>
             <MotionCard
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -980,7 +980,7 @@ function AdvertisementsTab({ adStats, setAdStats, clients }: AdvertisementsTabPr
           };
 
           return (
-            <Grid item xs={12} md={6} lg={4} key={ad.id}>
+            <Grid size={{ xs: 12, md: 6, lg: 4 }} key={ad.id}>
               <MotionCard
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -1306,7 +1306,7 @@ function FinanceTab({ transactions, setTransactions, clients, adStats }: Finance
           { label: 'Расходы', value: stats.expense, icon: TrendingDown, gradient: 'linear-gradient(135deg, #eb3349 0%, #f45c43 100%)', color: '#fff' },
           { label: 'Чистая прибыль', value: stats.balance, icon: DollarSign, gradient: stats.balance >= 0 ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : 'linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)', color: '#fff' }
         ].map((stat, idx) => (
-          <Grid item xs={12} md={3} key={stat.label}>
+          <Grid size={{ xs: 12, md: 3 }} key={stat.label}>
             <MotionCard
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1359,7 +1359,7 @@ function FinanceTab({ transactions, setTransactions, clients, adStats }: Finance
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>Прибыль по городам</Typography>
           <Grid container spacing={2}>
             {cityStats.map((stat, idx) => (
-              <Grid item xs={12} md={6} lg={4} key={stat.city}>
+              <Grid size={{ xs: 12, md: 6, lg: 4 }} key={stat.city}>
                 <MotionBox
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
